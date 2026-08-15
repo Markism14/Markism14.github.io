@@ -3,7 +3,7 @@
 #portfolio-root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f5f5f5;background:#070708;min-height:100%;padding:0 0 60px;overflow:hidden}
 #portfolio-root *{box-sizing:border-box}
 #portfolio-root .hero{min-height:620px;display:flex;align-items:center;justify-content:center;text-align:center;padding:72px 24px;position:relative;background:radial-gradient(circle at 50% 20%,rgba(120,90,255,.18),transparent 30%),radial-gradient(circle at 80% 70%,rgba(0,220,255,.08),transparent 25%),linear-gradient(135deg,#0e0e12,#050507)}
-#portfolio-root section{scroll-margin-top:30px;scroll-snap-align:start;}
+#portfolio-root section{scroll-margin-top:30px;scroll-snap-align:start}
 #portfolio-root{scroll-behavior:smooth}
 html:has(#portfolio-root){scroll-behavior:smooth;scroll-snap-type:y mandatory}
 #portfolio-root .hero,#portfolio-root section{min-height:100vh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;justify-content:center}
@@ -71,46 +71,425 @@ html:has(#portfolio-root){scroll-behavior:smooth;scroll-snap-type:y mandatory}
 #portfolio-root .timeline-item{position:relative}.timeline-item:before{content:"";position:absolute;left:-30px;top:5px;width:9px;height:9px;border-radius:50%;background:#fff}
 #portfolio-root .timeline-item strong{display:block;font-size:17px;margin-bottom:5px}.timeline-item span{color:#777;font-size:13px}.timeline-item p{color:#999;line-height:1.6;margin:8px 0 0}
 #portfolio-root .socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+#portfolio-root .side-index{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:16px;padding:12px;border-left:1px solid #292832;background:linear-gradient(90deg,rgba(7,7,8,.05),rgba(7,7,8,.78));backdrop-filter:blur(10px)}
+#portfolio-root .side-index a{display:flex;align-items:center;gap:9px;color:#777;text-decoration:none;font-size:10px;letter-spacing:1px;transition:.25s;min-width:92px}.side-index a:before{content:"";width:7px;height:7px;border:1px solid #666;border-radius:50%;transition:.25s}.side-index a:hover,#portfolio-root .side-index a.active{color:#fff}.side-index a.active:before{background:#fff;border-color:#fff;box-shadow:0 0 12px rgba(255,255,255,.55)}.side-index .num{opacity:.7}
+#portfolio-root .tools-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:24px}.tool-card{border:1px solid #292832;background:linear-gradient(145deg,#121218,#0d0d11);border-radius:18px;padding:18px 10px;text-align:center;transition:.3s;min-height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center}.tool-card:hover{transform:translateY(-5px);border-color:#555}.tool-logo{width:52px;height:52px;object-fit:contain;margin-bottom:10px;border-radius:12px}.tool-card strong{font-size:13px;line-height:1.25}.tool-card small{color:#777;font-size:10px;margin-top:7px}
+#portfolio-root .learning-list{display:grid;gap:10px;margin-top:20px}.learning-item{color:#aaa;font-size:13px;display:flex;gap:9px;align-items:center}.learning-item:before{content:"";width:5px;height:5px;border-radius:50%;background:#fff}
+#portfolio-root .setup-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:30px}.laptop-stage{min-height:310px;display:flex;align-items:center;justify-content:center;perspective:900px}.laptop{width:min(430px,90%);animation:floatLaptop 4s ease-in-out infinite}.laptop-screen{background:#111;border:7px solid #25252b;border-radius:14px 14px 7px 7px;padding:8px;box-shadow:0 25px 55px rgba(0,0,0,.45)}.laptop-display{height:220px;border-radius:6px;background:radial-gradient(circle at 50% 30%,rgba(120,90,255,.35),transparent 35%),linear-gradient(135deg,#11131a,#050507);display:flex;align-items:center;justify-content:center}.laptop-display:after{content:"LENOVO LOQ";font-size:24px;font-weight:800;letter-spacing:3px;color:#ddd}.laptop-base{height:18px;background:linear-gradient(#383840,#18181d);border-radius:2px 2px 14px 14px}.setup-specs{display:grid;gap:10px}.spec-row{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid #25252b;color:#999;font-size:13px}.spec-row strong{color:#eee}@keyframes floatLaptop{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 #portfolio-root footer{border-top:1px solid #222;text-align:center;padding:35px 20px;color:#666;font-size:13px}
 @keyframes shine{to{background-position:300% center}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes sweep{0%{left:-120px}60%,100%{left:450px}}@keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:800px){#portfolio-root .about-grid{grid-template-columns:1fr}#portfolio-root .projects{grid-template-columns:1fr}#portfolio-root .hero{min-height:470px}}
+@media(max-width:1000px){#portfolio-root .tools-grid{grid-template-columns:repeat(3,1fr)}#portfolio-root .setup-grid{grid-template-columns:1fr}}
+@media(max-width:800px){#portfolio-root .about-grid{grid-template-columns:1fr}#portfolio-root .projects{grid-template-columns:1fr}#portfolio-root .hero{min-height:470px}#portfolio-root .side-index{position:fixed;top:auto;bottom:12px;left:50%;right:auto;transform:translateX(-50%);flex-direction:row;border:1px solid #292832;border-radius:999px;padding:8px 12px;background:rgba(10,10,14,.86)}#portfolio-root .side-index a{min-width:auto;font-size:0}.side-index a:before{display:none}.tools-grid{grid-template-columns:repeat(2,1fr)!important}}
 @media(prefers-reduced-motion:reduce){#portfolio-root *{animation:none!important;transition:none!important}}
-
-/* RIGHT SIDE SECTION PROGRESS */
-#portfolio-root .section-rail{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding:10px 9px;border:1px solid rgba(255,255,255,.09);background:rgba(8,8,12,.42);backdrop-filter:blur(14px);border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.18)}
-#portfolio-root .rail-item{display:flex;align-items:center;gap:9px;color:#666;font-size:9px;letter-spacing:1.5px;text-decoration:none;transition:all .35s ease;white-space:nowrap}
-#portfolio-root .rail-item .rail-line{width:17px;height:1px;background:#3a3942;transition:all .35s ease}
-#portfolio-root .rail-item.active{color:#fff}
-#portfolio-root .rail-item.active .rail-line{width:27px;background:#b8b1ff;box-shadow:0 0 10px rgba(184,177,255,.35)}
-#portfolio-root .rail-item .rail-no{opacity:.55}
-#portfolio-root .rail-item.active .rail-no{opacity:1}
-@media(max-width:800px){#portfolio-root .section-rail{right:10px;gap:7px;padding:8px 7px;border-radius:13px}#portfolio-root .rail-item{font-size:8px;letter-spacing:1px;gap:6px}#portfolio-root .rail-item .rail-line{width:12px}#portfolio-root .rail-item.active .rail-line{width:20px}}
-@media(max-width:560px){#portfolio-root .section-rail{right:8px;top:auto;bottom:18px;transform:none;flex-direction:row;align-items:center;border-radius:999px;padding:7px 9px}#portfolio-root .rail-item .rail-text{display:none}#portfolio-root .rail-item .rail-no{font-size:9px}#portfolio-root .rail-item .rail-line{width:7px}#portfolio-root .rail-item.active .rail-line{width:18px}}
 </style>
-<div class="hero" id="home">
-<nav class="nav"><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+
+<div class="hero">
+<nav class="nav">
+<a href="#about">About</a>
+<a href="#work">Work</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<nav class="side-index" aria-label="Page navigation">
+<a href="#about"><span class="num">01</span><span>ABOUT</span></a>
+<a href="#work"><span class="num">02</span><span>WORK</span></a>
+<a href="#experience"><span class="num">03</span><span>EXPERIENCE</span></a>
+<a href="#tools"><span class="num">04</span><span>TOOLS</span></a>
+<a href="#setup"><span class="num">05</span><span>SETUP</span></a>
+<a href="#contact"><span class="num">06</span><span>CONTACT</span></a>
+</nav>
+
 <div class="hero-inner">
 <img class="hero-profile" src="images/profile.png" alt="Mark Neil Robias">
 <div class="eyebrow">AI Content Creator • Video Editor • Virtual Assistant</div>
 <div class="status">Open to remote opportunities</div>
 <h1>Hi, I'm <span class="gradient">Mark Neil Robias.</span></h1>
 <p>I create engaging digital content through AI, video editing, and creative storytelling. My portfolio brings together AI visuals, AI video projects, personal vlog editing, and practical digital work.</p>
-<div class="buttons"><a class="btn primary" href="#work">View My Work</a><a class="btn" href="#contact">Contact Me</a></div>
-</div></div>
-<div class="section-rail" aria-label="Page navigation"><a class="rail-item active" href="#home" data-section="home"><span class="rail-no">00</span><span class="rail-text">HOME</span><span class="rail-line"></span></a><a class="rail-item" href="#about" data-section="about"><span class="rail-no">01</span><span class="rail-text">ABOUT</span><span class="rail-line"></span></a><a class="rail-item" href="#work" data-section="work"><span class="rail-no">02</span><span class="rail-text">WORK</span><span class="rail-line"></span></a><a class="rail-item" href="#experience" data-section="experience"><span class="rail-no">03</span><span class="rail-text">EXPERIENCE</span><span class="rail-line"></span></a><a class="rail-item" href="#contact" data-section="contact"><span class="rail-no">04</span><span class="rail-text">CONTACT</span><span class="rail-line"></span></a></div>
-<section id="about"><div class="section-label">01 — About</div><h2>Creative, curious & always learning.</h2><div class="about-grid"><div class="panel"><p class="lead">I'm Mark Neil Robias, an aspiring Virtual Assistant and AI Content Creator with hands-on experience creating and editing my own videos, experimenting with AI-generated images and videos, and producing social media content.</p><p class="lead">While I don't have formal VA experience yet, I have technical, digital, data, and remote-work experience. I'm a fast learner, willing to be trained, and ready to adapt to different clients, workflows, tools, and creative styles.</p><div class="skills"><span class="skill">Video Editing</span><span class="skill">AI Video</span><span class="skill">AI Images</span><span class="skill">Content Creation</span><span class="skill">Short-form Video</span><span class="skill">Social Media</span><span class="skill">Data Entry</span><span class="skill">Internet Research</span></div></div><div class="panel"><div class="section-label">What I bring</div><h3>Hands-on experience</h3><p class="lead">I enjoy experimenting with new AI tools and turning ideas into visual content. I'm comfortable learning independently and improving through practice.</p><h3>Professional mindset</h3><p class="lead">I'm open to feedback, willing to complete test tasks, and motivated to grow in a professional team environment.</p></div></div></section>
-<section id="work"><div class="section-label">02 — Selected Work</div><h2>Projects & Samples</h2><p class="lead">Personal and practice projects created to demonstrate my editing and AI content creation skills.</p><div class="projects"><article class="project"><video controls preload="metadata" style="width:100%;height:auto;max-height:300px;object-fit:contain;border-radius:15px;background:#08080b;display:block" src="/samples/Sample-1.mp4"></video><h3>AI Video Sample 01</h3><p>AI-generated video demonstrating visual creation, pacing and editing.</p><span class="tag">AI Video</span><a class="sample-link" href="/samples/Sample-1.mp4" target="_blank" rel="noopener">Open full video →</a></article><article class="project"><video controls preload="metadata" style="width:100%;height:auto;max-height:300px;object-fit:contain;border-radius:15px;background:#08080b;display:block" src="/samples/Sample-3.mp4"></video><h3>AI Video Sample 03</h3><p>AI-assisted visual storytelling with creative editing and motion.</p><span class="tag">AI Video</span><a class="sample-link" href="/samples/Sample-3.mp4" target="_blank" rel="noopener">Open full video →</a></article><article class="project"><div class="project-art">📱</div><h3>Short-form Content</h3><p>TikTok-style content with hooks, captions, pacing, music and visual effects.</p><span class="tag">Social Media</span><a class="sample-link" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener">View my TikTok →</a></article><article class="project"><div class="project-art">🎞️</div><h3>Vlog Editing</h3><p>Personal vlog content edited with cuts, music, transitions and storytelling.</p><span class="tag">Personal Project</span><a class="sample-link" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener">Watch my vlog →</a></article><article class="project"><div class="project-art">🚀</div><h3>Practice Campaign</h3><p>Concept social media campaign designed to demonstrate creative editing skills.</p><span class="tag">Practice Project</span></article></div><div class="panel" style="margin-top:30px"><div class="section-label">AI Image Gallery</div><h3>Selected AI Visuals</h3><p class="lead">A selection of AI-generated image concepts exploring cinematic scenes, characters, fashion, storytelling, and visual styles.</p><div class="ai-gallery"><a class="ai-card" href="images/ai-01.jpeg" target="_blank" rel="noopener"><div class="ai-image"><img src="images/ai-01.jpeg" alt="AI visual 1"><div class="ai-caption"><h3>AI Visual 01</h3><p>AI-generated visual concept and creative composition.</p><span class="tag">AI Image</span></div></div></a><a class="ai-card" href="images/ai-02.jpeg" target="_blank" rel="noopener"><div class="ai-image"><img src="images/ai-02.jpeg" alt="AI visual 2"><div class="ai-caption"><h3>AI Visual 02</h3><p>AI-generated visual concept and creative composition.</p><span class="tag">AI Image</span></div></div></a><a class="ai-card" href="images/ai-03.jpeg" target="_blank" rel="noopener"><div class="ai-image"><img src="images/ai-03.jpeg" alt="AI visual 3"><div class="ai-caption"><h3>AI Visual 03</h3><p>AI-generated visual concept and creative composition.</p><span class="tag">AI Image</span></div></div></a><a class="ai-card" href="images/ai-04.jpeg" target="_blank" rel="noopener"><div class="ai-image"><img src="images/ai-04.jpeg" alt="AI visual 4"><div class="ai-caption"><h3>AI Visual 04</h3><p>AI-generated visual concept and creative composition.</p><span class="tag">AI Image</span></div></div></a><a class="ai-card" href="images/ai-05.jpeg" target="_blank" rel="noopener"><div class="ai-image"><img src="images/ai-05.jpeg" alt="AI visual 5"><div class="ai-caption"><h3>AI Visual 05</h3><p>AI-generated visual concept and creative composition.</p><span class="tag">AI Image</span></div></div></a><a class="ai-card" href="images/ai-06.jpeg" target="_blank" rel="noopener"><div class="ai-image"><img src="images/ai-06.jpeg" alt="AI visual 6"><div class="ai-caption"><h3>AI Visual 06</h3><p>AI-generated visual concept and creative composition.</p><span class="tag">AI Image</span></div></div></a></div></div><div class="panel" style="margin-top:30px"><div class="section-label">Vlog Highlights</div><h3>Selected YouTube Projects</h3><div class="socials"><a class="btn" href="https://www.youtube.com/watch?v=YSQ_g25_gzQ" target="_blank" rel="noopener">Pinoy–Thai Couple Vlog →</a><a class="btn" href="https://www.youtube.com/watch?v=0YMUzLGUJ4c&t=433s" target="_blank" rel="noopener">Loy Krathong Day →</a><a class="btn" href="https://www.youtube.com/watch?v=VYdA98Y0Znk&t=4s" target="_blank" rel="noopener">Sak Yant Tattoo Vlog →</a></div></div></section>
-<section id="experience"><div class="section-label">03 — Experience</div><h2>My Background</h2><p class="lead">A mix of creative, technical, data, and remote-work experience.</p><div class="timeline"><div class="timeline-item"><strong>Personal Content Creation</strong><span>Video Editing • AI Content • Social Media</span><p>Created and edited personal videos and experimented with AI-generated images and videos.</p></div><div class="timeline-item"><strong>Freelance PC Technician / Technical Assistant</strong><span>Remote • 2024–Present</span><p>Remote troubleshooting, software installation, system optimization and internet-related technical support.</p></div><div class="timeline-item"><strong>Woflow — Image Annotation Specialist</strong><span>2023–2024</span><p>Handled digital image annotation services while following detailed project guidelines.</p></div><div class="timeline-item"><strong>TELUS International Digital — Personalized Internet Ads Assessor</strong><span>2021–2023</span><p>Evaluated and rated online advertisements, search results, and listings for relevance and quality.</p></div><div class="timeline-item"><strong>Upwork — B2B Lead Generation & Data Entry</strong><span>2021–2022</span><p>Conducted research, built lead lists, updated CRM data, and managed spreadsheets.</p></div><div class="timeline-item"><strong>Graphic Design / Digital Printing</strong><span>2013–2016</span><p>Created layouts and graphics using Adobe Photoshop, Illustrator, InDesign, and Acrobat Pro.</p></div></div></section>
-<section id="contact"><div class="section-label">04 — Resume & Contact</div><h2>Let's work together.</h2><p class="lead">I'm currently looking for opportunities in video editing, AI content creation, Virtual Assistant work, technical support, and digital operations.</p><div class="socials"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">View / Download Resume</a><span class="btn" style="cursor:text;user-select:text">markneilrobias@gmail.com</span><a class="btn" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a><a class="btn" href="https://www.youtube.com/@mindmorph14" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a></div></section>
-<footer>© 2026 Mark Neil S. Robias • AI Content Creator & Video Editor • Open to Remote Opportunities</footer>
+
+<div class="buttons">
+<a class="btn primary" href="#work">View My Work</a>
+<a class="btn" href="#contact">Contact Me</a>
+</div>
+</div>
+</div>
+
+<section id="about">
+<div class="section-label">01 — About</div>
+<h2>Creative, curious & always learning.</h2>
+
+<div class="about-grid">
+<div class="panel">
+<p class="lead">I'm Mark Neil Robias, an aspiring Virtual Assistant and AI Content Creator with hands-on experience creating and editing my own videos, experimenting with AI-generated images and videos, and producing social media content.</p>
+
+<p class="lead">While I don't have formal VA experience yet, I have technical, digital, data, and remote-work experience. I'm a fast learner, willing to be trained, and ready to adapt to different clients, workflows, tools, and creative styles.</p>
+
+<div class="skills">
+<span class="skill">Video Editing</span>
+<span class="skill">AI Video</span>
+<span class="skill">AI Images</span>
+<span class="skill">Content Creation</span>
+<span class="skill">Short-form Video</span>
+<span class="skill">Social Media</span>
+<span class="skill">Data Entry</span>
+<span class="skill">Internet Research</span>
+</div>
+</div>
+
+<div class="panel">
+<div class="section-label">What I bring</div>
+<h3>Hands-on experience</h3>
+<p class="lead">I enjoy experimenting with new AI tools and turning ideas into visual content. I'm comfortable learning independently and improving through practice.</p>
+
+<h3>Professional mindset</h3>
+<p class="lead">I'm open to feedback, willing to complete test tasks, and motivated to grow in a professional team environment.</p>
+</div>
+</div>
+</section>
+
+<section id="work">
+<div class="section-label">02 — Selected Work</div>
+<h2>Projects & Samples</h2>
+<p class="lead">Personal and practice projects created to demonstrate my editing and AI content creation skills.</p>
+
+<div class="projects">
+
+<article class="project">
+<video controls preload="metadata" style="width:100%;height:auto;max-height:300px;object-fit:contain;border-radius:15px;background:#08080b;display:block" src="/samples/Sample-1.mp4"></video>
+<h3>AI Video Sample 01</h3>
+<p>AI-generated video demonstrating visual creation, pacing and editing.</p>
+<span class="tag">AI Video</span>
+<a class="sample-link" href="/samples/Sample-1.mp4" target="_blank" rel="noopener">Open full video →</a>
+</article>
+
+<article class="project">
+<video controls preload="metadata" style="width:100%;height:auto;max-height:300px;object-fit:contain;border-radius:15px;background:#08080b;display:block" src="/samples/Sample-3.mp4"></video>
+<h3>AI Video Sample 03</h3>
+<p>AI-assisted visual storytelling with creative editing and motion.</p>
+<span class="tag">AI Video</span>
+<a class="sample-link" href="/samples/Sample-3.mp4" target="_blank" rel="noopener">Open full video →</a>
+</article>
+
+<article class="project">
+<div class="project-art">📱</div>
+<h3>Short-form Content</h3>
+<p>TikTok-style content with hooks, captions, pacing, music and visual effects.</p>
+<span class="tag">Social Media</span>
+<a class="sample-link" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener">View my TikTok →</a>
+</article>
+
+<article class="project">
+<div class="project-art">🎞️</div>
+<h3>Vlog Editing</h3>
+<p>Personal vlog content edited with cuts, music, transitions and storytelling.</p>
+<span class="tag">Personal Project</span>
+<a class="sample-link" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener">Watch my vlog →</a>
+</article>
+
+<article class="project">
+<div class="project-art">🚀</div>
+<h3>Practice Campaign</h3>
+<p>Concept social media campaign designed to demonstrate creative editing skills.</p>
+<span class="tag">Practice Project</span>
+</article>
+
+</div>
+
+<div class="panel" style="margin-top:30px">
+<div class="section-label">AI Image Gallery</div>
+<h3>Selected AI Visuals</h3>
+<p class="lead">A selection of AI-generated image concepts exploring cinematic scenes, characters, fashion, storytelling, and visual styles.</p>
+
+<div class="ai-gallery">
+
+<a class="ai-card" href="images/ai-01.jpeg" target="_blank" rel="noopener">
+<div class="ai-image">
+<img src="images/ai-01.jpeg" alt="AI visual 1">
+<div class="ai-caption">
+<h3>AI Visual 01</h3>
+<p>AI-generated visual concept and creative composition.</p>
+<span class="tag">AI Image</span>
+</div>
+</div>
+</a>
+
+<a class="ai-card" href="images/ai-02.jpeg" target="_blank" rel="noopener">
+<div class="ai-image">
+<img src="images/ai-02.jpeg" alt="AI visual 2">
+<div class="ai-caption">
+<h3>AI Visual 02</h3>
+<p>AI-generated visual concept and creative composition.</p>
+<span class="tag">AI Image</span>
+</div>
+</div>
+</a>
+
+<a class="ai-card" href="images/ai-03.jpeg" target="_blank" rel="noopener">
+<div class="ai-image">
+<img src="images/ai-03.jpeg" alt="AI visual 3">
+<div class="ai-caption">
+<h3>AI Visual 03</h3>
+<p>AI-generated visual concept and creative composition.</p>
+<span class="tag">AI Image</span>
+</div>
+</div>
+</a>
+
+<a class="ai-card" href="images/ai-04.jpeg" target="_blank" rel="noopener">
+<div class="ai-image">
+<img src="images/ai-04.jpeg" alt="AI visual 4">
+<div class="ai-caption">
+<h3>AI Visual 04</h3>
+<p>AI-generated visual concept and creative composition.</p>
+<span class="tag">AI Image</span>
+</div>
+</div>
+</a>
+
+<a class="ai-card" href="images/ai-05.jpeg" target="_blank" rel="noopener">
+<div class="ai-image">
+<img src="images/ai-05.jpeg" alt="AI visual 5">
+<div class="ai-caption">
+<h3>AI Visual 05</h3>
+<p>AI-generated visual concept and creative composition.</p>
+<span class="tag">AI Image</span>
+</div>
+</div>
+</a>
+
+<a class="ai-card" href="images/ai-06.jpeg" target="_blank" rel="noopener">
+<div class="ai-image">
+<img src="images/ai-06.jpeg" alt="AI visual 6">
+<div class="ai-caption">
+<h3>AI Visual 06</h3>
+<p>AI-generated visual concept and creative composition.</p>
+<span class="tag">AI Image</span>
+</div>
+</div>
+</a>
+
+</div>
+</div>
+
+<div class="panel" style="margin-top:30px">
+<div class="section-label">Vlog Highlights</div>
+<h3>Selected YouTube Projects</h3>
+
+<div class="socials">
+<a class="btn" href="https://www.youtube.com/watch?v=YSQ_g25_gzQ" target="_blank" rel="noopener">Pinoy–Thai Couple Vlog →</a>
+<a class="btn" href="https://www.youtube.com/watch?v=0YMUzLGUJ4c&t=433s" target="_blank" rel="noopener">Loy Krathong Day →</a>
+<a class="btn" href="https://www.youtube.com/watch?v=VYdA98Y0Znk&t=4s" target="_blank" rel="noopener">Sak Yant Tattoo Vlog →</a>
+</div>
+</div>
+</section>
+
+<section id="experience">
+<div class="section-label">03 — Experience</div>
+<h2>My Background</h2>
+<p class="lead">A mix of creative, technical, data, and remote-work experience.</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<strong>Personal Content Creation</strong>
+<span>Video Editing • AI Content • Social Media</span>
+<p>Created and edited personal videos and experimented with AI-generated images and videos.</p>
+</div>
+
+<div class="timeline-item">
+<strong>Freelance PC Technician / Technical Assistant</strong>
+<span>Remote • 2024–Present</span>
+<p>Remote troubleshooting, software installation, system optimization and internet-related technical support.</p>
+</div>
+
+<div class="timeline-item">
+<strong>Woflow — Image Annotation Specialist</strong>
+<span>2023–2024</span>
+<p>Handled digital image annotation services while following detailed project guidelines.</p>
+</div>
+
+<div class="timeline-item">
+<strong>TELUS International Digital — Personalized Internet Ads Assessor</strong>
+<span>2021–2023</span>
+<p>Evaluated and rated online advertisements, search results, and listings for relevance and quality.</p>
+</div>
+
+<div class="timeline-item">
+<strong>Upwork — B2B Lead Generation & Data Entry</strong>
+<span>2021–2022</span>
+<p>Conducted research, built lead lists, updated CRM data, and managed spreadsheets.</p>
+</div>
+
+<div class="timeline-item">
+<strong>Graphic Design / Digital Printing</strong>
+<span>2013–2016</span>
+<p>Created layouts and graphics using Adobe Photoshop, Illustrator, InDesign, and Acrobat Pro.</p>
+</div>
+
+</div>
+</section>
+
+<section id="tools">
+<div class="section-label">04 — Tools & Software</div>
+<h2>Tools I Use</h2>
+<p class="lead">Software I'm familiar with and actively exploring for creative, administrative, CRM, and business workflows.</p>
+
+<div class="tools-grid">
+
+<div class="tool-card">
+<img class="tool-logo" src="https://cdn.simpleicons.org/quickbooks/2CA01C" alt="QuickBooks">
+<strong>QuickBooks</strong>
+<small>Familiar</small>
+</div>
+
+<div class="tool-card">
+<img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Adobe Photoshop">
+<strong>Adobe Photoshop</strong>
+<small>Familiar</small>
+</div>
+
+<div class="tool-card">
+<img class="tool-logo" src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva">
+<strong>Canva</strong>
+<small>Familiar</small>
+</div>
+
+<div class="tool-card">
+<img class="tool-logo" src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot">
+<strong>HubSpot</strong>
+<small>Learning</small>
+</div>
+
+<div class="tool-card">
+<img class="tool-logo" src="https://cdn.simpleicons.org/salesforce/00A1E0" alt="Salesforce">
+<strong>Salesforce</strong>
+<small>Learning</small>
+</div>
+
+<div class="tool-card">
+<img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice/D83B01" alt="Microsoft Office">
+<strong>Microsoft Office</strong>
+<small>Familiar</small>
+</div>
+
+</div>
+
+<div class="about-grid" style="margin-top:28px">
+
+<div class="panel">
+<div class="section-label">Currently Learning</div>
+<h3>Building practical VA skills</h3>
+
+<div class="learning-list">
+<div class="learning-item">AI-assisted workflows</div>
+<div class="learning-item">Virtual Assistant workflows</div>
+<div class="learning-item">CRM management</div>
+<div class="learning-item">Bookkeeping fundamentals</div>
+<div class="learning-item">Content management</div>
+</div>
+</div>
+
+<div class="panel">
+<div class="section-label">Work Style</div>
+<h3>Adaptable & self-directed</h3>
+<p class="lead">I learn new software through hands-on practice and documentation, then apply what I learn to real workflows and personal projects.</p>
+</div>
+
+</div>
+</section>
+
+<section id="setup">
+<div class="section-label">05 — My Setup</div>
+<h2>My Workstation</h2>
+<p class="lead">A dedicated personal laptop setup for remote work, content creation, editing, research, and learning new tools.</p>
+
+<div class="setup-grid">
+
+<div class="laptop-stage">
+<div class="laptop">
+<div class="laptop-screen">
+<div class="laptop-display"></div>
+</div>
+<div class="laptop-base"></div>
+</div>
+</div>
+
+<div class="panel">
+<div class="section-label">MY LAPTOP</div>
+<h3>Lenovo LOQ 83LK</h3>
+
+<div class="setup-specs">
+<div class="spec-row">
+<span>Processor</span>
+<strong>Intel Core i5-12450HX</strong>
+</div>
+
+<div class="spec-row">
+<span>Memory</span>
+<strong>16 GB RAM</strong>
+</div>
+
+<div class="spec-row">
+<span>Operating System</span>
+<strong>Windows 11 Pro</strong>
+</div>
+
+<div class="spec-row">
+<span>Graphics</span>
+<strong>NVIDIA GPU</strong>
+</div>
+
+<div class="spec-row">
+<span>Use</span>
+<strong>Remote Work • Editing • AI</strong>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="section-label">06 — Resume & Contact</div>
+<h2>Let's work together.</h2>
+<p class="lead">I'm currently looking for opportunities in video editing, AI content creation, Virtual Assistant work, technical support, and digital operations.</p>
+
+<div class="socials">
+<a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">View / Download Resume</a>
+<span class="btn" style="cursor:text;user-select:text">markneilrobias@gmail.com</span>
+<a class="btn" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+<a class="btn" href="https://www.youtube.com/@mindmorph14" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+</div>
+</section>
+
+<footer>
+© 2026 Mark Neil S. Robias • AI Content Creator & Video Editor • Open to Remote Opportunities
+</footer>
+
 <script>
 const root=document.querySelector('#portfolio-root');
-const navLinks=[...root.querySelectorAll('.nav a')];
-const railItems=[...root.querySelectorAll('.section-rail .rail-item')];
-railItems.forEach(item=>item.addEventListener('click',e=>{e.preventDefault();const target=root.querySelector(item.getAttribute('href'));if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}));
-root.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1){e.preventDefault();const target=root.querySelector(id);if(target)target.scrollIntoView({behavior:'smooth',block:'start'})}}));
+
+const navLinks=[...root.querySelectorAll('.nav a,.side-index a')];
+
+root.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+const id=a.getAttribute('href');
+if(id.length>1){
+e.preventDefault();
+const target=root.querySelector(id);
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'})
+}
+}));
+
 const sections=[root.querySelector('.hero'),...root.querySelectorAll('section[id]')];
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('cinematic-active');navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+(entry.target.id||''))); railItems.forEach(a=>a.classList.toggle('active',a.dataset.section===(entry.target.id||'')));}}),{threshold:.15});
+
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('cinematic-active');
+navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+(entry.target.id||'')));
+}
+}),{threshold:.15});
+
 sections.forEach(s=>s&&observer.observe(s));
 </script>
+
 </div>
