@@ -162,6 +162,24 @@ section.visible:before{transform:scaleX(1)}
 .tool-link:after{content:"↗";margin-left:auto;font-size:13px;opacity:.35;transition:opacity .2s ease,transform .2s ease}
 .tool-link:hover:after{opacity:.9;transform:translate(2px,-2px)}
 
+
+.tool-fallback{display:flex;align-items:center;justify-content:center;border-radius:9px;background:#1a1d23;border:1px solid #343943;color:#fff;font-weight:900;font-size:11px}
+
+
+#tools h3{margin-top:32px;margin-bottom:10px}
+#tools h3 + p{max-width:820px;line-height:1.7;margin-top:0}
+
+
+/* Final tool-logo treatment */
+.tool-logo{width:38px!important;height:38px!important;object-fit:contain!important;display:block!important;flex:0 0 38px!important;border-radius:9px}
+.tool-link .tool-logo{background:#fff;padding:5px}
+.tool-link:first-child .tool-logo,
+.tool-link:nth-child(2) .tool-logo,
+.tool-link:nth-child(3) .tool-logo{background:#171a20;padding:4px}
+.tool-link:hover .tool-logo{transform:scale(1.08)}
+#tools h3{margin-top:34px!important;margin-bottom:10px!important}
+#tools h3 + p{margin-top:0!important;line-height:1.7!important;max-width:850px}
+
 </style>
 </head>
 <body><div class="scroll-progress" aria-hidden="true"></div>
@@ -181,10 +199,6 @@ section.visible:before{transform:scaleX(1)}
    <div class="eyebrow">AI Content Creator • AI Video Creator • Video Editor • Virtual Assistant</div>
    <h1>Hi, I'm <span>Mark Neil Robias.</span></h1>
    <p class="hero-copy">I create AI-powered visual content, edit videos, build digital assets, and provide reliable virtual assistance. I’m comfortable learning new AI tools and adapting to different creative and business workflows.</p>
-   <div class="quick">
-    <a class="btn primary" href="#work">View My Work</a>
-    <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
-   </div>
   </div>
   <aside class="profile">
    <img src="images/profile.png" alt="Mark Neil Robias">
@@ -259,13 +273,30 @@ section.visible:before{transform:scaleX(1)}
  <div class="container">
   <div class="kicker">04 — Experience</div><h2>Professional Background</h2><p class="lead">A combination of creative, technical, data, and remote-work experience.</p>
   <div class="timeline">
-   <div class="timeline-item"><h3>AI Video & Visual Content Creation</h3><div class="date">Independent / Project-Based Experience</div><p>Created AI-assisted videos, images, GIFs, characters, scenes, and visual assets using multiple AI generation and editing platforms. Worked from scripts, visual instructions, scene requirements, and creative direction while combining generated assets into polished content.</p></div>
-   <div class="timeline-item"><h3>Personal Content Creation</h3><div class="date">Video Editing • AI Content • Social Media</div><p>Created and edited personal videos and experimented with AI-generated images and videos for creative content.</p></div>
-   <div class="timeline-item"><h3>Freelance PC Technician / Technical Assistant</h3><div class="date">Remote • 2024–Present</div><p>Remote troubleshooting, software installation, system optimization, and internet-related technical support.</p></div>
-   <div class="timeline-item"><h3>Woflow — Image Annotation Specialist</h3><div class="date">2023–2024</div><p>Handled digital image annotation services while following detailed project guidelines.</p></div>
-   <div class="timeline-item"><h3>TELUS International Digital — Personalized Internet Ads Assessor</h3><div class="date">2021–2023</div><p>Evaluated and rated online advertisements, search results, and listings for relevance and quality.</p></div>
-   <div class="timeline-item"><h3>Upwork — B2B Lead Generation & Data Entry</h3><div class="date">2021–2022</div><p>Conducted research, built lead lists, updated CRM data, and managed spreadsheets.</p></div>
-   <div class="timeline-item"><h3>Graphic Design / Digital Printing</h3><div class="date">2013–2016</div><p>Created layouts and graphics using Adobe Photoshop, Illustrator, InDesign, and Acrobat Pro.</p></div>
+   <div class="timeline-item"><h3>AI Video, GIF & Visual Content Creation</h3><div class="date">Independent / Project-Based Experience</div>
+    <p>Generate client-provided scripts, images, and visual guides into multiple scene options, then select and combine the preferred scenes into a finished sequence. Perform image editing such as replacing people, changing gestures, and adjusting visual details. Also create AI-video prompts for requested movement, actions, and scene behavior, then generate and refine the requested clips.</p>
+   </div>
+   <div class="timeline-item"><h3>Personal Content Creation</h3><div class="date">Video Editing • AI Content • Social Media</div>
+    <p>Create and edit personal short-form and vlog content, applying cuts, pacing, captions, music, transitions, visual selection, and story flow while experimenting with AI-generated images and video.</p>
+   </div>
+   <div class="timeline-item"><h3>Freelance PC Technician / Technical Assistant</h3><div class="date">Remote • 2024–Present</div>
+    <p>Provide remote troubleshooting and technical support, including software installation, system diagnostics, configuration, optimization, and internet-related assistance.</p>
+   </div>
+   <div class="timeline-item"><h3>Woflow — Image Annotation Specialist</h3><div class="date">2023–2024</div>
+    <p>Research requested products or images by checking official websites and authorized sellers, then collect the correct link and image when available. Verify that the image matches the requested item and follow project guidelines for accurate annotation and data quality.</p>
+   </div>
+   <div class="timeline-item"><h3>TELUS International Digital — Personalized Internet Ads Assessor</h3><div class="date">2021–2023</div>
+    <p>Review search queries, advertisements, and landing pages and rate whether the result is relevant, appropriate, or problematic using project rating guidelines. Also review age-restricted or potentially policy-sensitive content, including checks involving YouTube and app-store listings.</p>
+   </div>
+   <div class="timeline-item"><h3>Upwork — B2B Lead Generation & Data Entry</h3><div class="date">2021–2022</div>
+    <p>Research businesses based on client criteria and locations, such as finding salons in a target area, then collect available business, owner, email, phone, website, and registration details and organize them in spreadsheets. Also completed data-entry projects by finding relevant websites and transferring requested information into Google Sheets.</p>
+   </div>
+   <div class="timeline-item"><h3>Graphic Design / Digital Printing</h3><div class="date">2013–2016</div>
+    <p>Created layouts and graphics using Adobe Photoshop, Illustrator, InDesign, and Acrobat Pro, and handled digital/wide-format printing, Xerox, and binding-related production work.</p>
+   </div>
+   <div class="timeline-item"><h3>Quezon City Hall — Internship / Administrative Support</h3><div class="date">2013</div>
+    <p>Supported data encoding and administrative tasks, including document organization and office-related assistance.</p>
+   </div>
   </div>
  </div>
 </section>
@@ -275,47 +306,47 @@ section.visible:before{transform:scaleX(1)}
   <div class="kicker">05 — Tools</div><h2>Tools & Software</h2><p class="lead">Creative AI, editing, design, productivity, CRM, and business tools.</p>
   <div class="tool-list">
    <a class="tool tool-link" href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener" aria-label="Open official Google Flow website">
-    <img class="tool-logo official-logo" src="https://labs.google/flow/about/hero/wordmark.svg" alt="Google Flow logo">
+    <img class="tool-logo official-logo" src="https://www.google.com/s2/favicons?domain=labs.google&sz=128" alt="Google Flow logo">
     <div><strong>Google Flow</strong><small>AI Video / Creative</small></div>
    </a>
    <a class="tool tool-link" href="https://klingai.com/" target="_blank" rel="noopener" aria-label="Open official Kling AI website">
-    <img class="tool-logo official-logo" src="https://kling.ai/favicon.ico" alt="Kling AI logo">
+    <img class="tool-logo official-logo" src="https://labs.google/fx/favicon.ico" alt="Kling AI logo">
     <div><strong>Kling AI</strong><small>AI Video Generation</small></div>
    </a>
    <a class="tool tool-link" href="https://www.lumina-os.com/" target="_blank" rel="noopener" aria-label="Open official Lumina website">
-    <img class="tool-logo official-logo" src="https://lumalabs.ai/favicon.ico" alt="Luma logo">
+    <img class="tool-logo official-logo" src="https://kling.ai/favicon.ico" alt="Luma logo">
     <div><strong>Lumina</strong><small>AI Creative</small></div>
    </a>
    <a class="tool tool-link" href="https://www.capcut.com/" target="_blank" rel="noopener" aria-label="Open official CapCut website">
-    <img class="tool-logo" src="https://cdn.simpleicons.org/capcut/ffffff" alt="CapCut logo">
+    <img class="tool-logo" src="https://lumina-os.com/favicon.ico" alt="CapCut logo">
     <div><strong>CapCut</strong><small>Video Editing</small></div>
    </a>
    <a class="tool tool-link" href="https://filmora.wondershare.com/" target="_blank" rel="noopener" aria-label="Open official Filmora website">
-    <img class="tool-logo" src="https://cdn.simpleicons.org/wondershare/ffffff" alt="Filmora / Wondershare logo">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/capcut" alt="Filmora / Wondershare logo">
     <div><strong>Filmora</strong><small>Video Editing</small></div>
    </a>
    <a class="tool tool-link" href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener" aria-label="Open official Adobe Photoshop website">
-    <img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Adobe Photoshop logo">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/wondershare" alt="Adobe Photoshop logo">
     <div><strong>Adobe Photoshop</strong><small>Image Editing</small></div>
    </a>
    <a class="tool tool-link" href="https://www.canva.com/" target="_blank" rel="noopener" aria-label="Open official Canva website">
-    <img class="tool-logo" src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva logo">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop" alt="Canva logo">
     <div><strong>Canva</strong><small>Design / Content</small></div>
    </a>
    <a class="tool tool-link" href="https://www.microsoft.com/microsoft-365" target="_blank" rel="noopener" aria-label="Open official Microsoft Office website">
-    <img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice/D83B01" alt="Microsoft Office logo">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/canva" alt="Microsoft Office logo">
     <div><strong>Microsoft Office</strong><small>Productivity</small></div>
    </a>
    <a class="tool tool-link" href="https://www.hubspot.com/" target="_blank" rel="noopener" aria-label="Open official HubSpot website">
-    <img class="tool-logo" src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot logo">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice" alt="HubSpot logo">
     <div><strong>HubSpot</strong><small>Currently Learning</small></div>
    </a>
    <a class="tool tool-link" href="https://www.salesforce.com/" target="_blank" rel="noopener" aria-label="Open official Salesforce website">
-    <img class="tool-logo" src="https://cdn.simpleicons.org/salesforce/00A1E0" alt="Salesforce logo">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/hubspot" alt="Salesforce logo">
     <div><strong>Salesforce</strong><small>Currently Learning</small></div>
    </a>
    <a class="tool tool-link" href="https://quickbooks.intuit.com/ph/" target="_blank" rel="noopener" aria-label="Open official QuickBooks website">
-    <img class="tool-logo" src="https://cdn.simpleicons.org/quickbooks/2CA01C" alt="QuickBooks logo">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/salesforce" alt="QuickBooks logo">
     <div><strong>QuickBooks</strong><small>Currently Learning</small></div>
    </a>
  </div><h3>AI Tool Adaptability</h3><p>I’m not limited to one platform. I can learn new AI tools through documentation, testing, examples, and hands-on practice, then adapt prompts and production methods to the required output.</p></div>
@@ -324,9 +355,9 @@ section.visible:before{transform:scaleX(1)}
 <section id="contact" class="reveal contact">
  <div class="container contact-grid">
   <div><div class="kicker">06 — Contact</div><h2>Let's work together.</h2><p class="lead">Open to opportunities in AI video creation, AI content, video editing, virtual assistance, technical support, and digital operations.</p><div class="contact-info"><span class="btn" style="cursor:text">markneilrobias@gmail.com</span><a class="btn" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener">Short-form TikTok</a><a class="btn" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener">Vlog YouTube</a></div></div>
-  <div class="quick"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a><a class="btn" href="https://markism14.github.io/" target="_blank" rel="noopener">Portfolio</a></div>
  </div>
 </section>
+
 </main>
 
 <footer><div class="container">© 2026 Mark Neil S. Robias • AI Content Creator & Video Editor • Open to Remote Opportunities</div></footer>
@@ -367,6 +398,34 @@ section.visible:before{transform:scaleX(1)}
   });
  }
 })();
+</script>
+
+
+<script>
+(function(){
+  document.querySelectorAll('.tool-logo').forEach(function(img){
+    img.addEventListener('error', function(){
+      if (img.dataset.fallback) return;
+      img.dataset.fallback='1';
+      var name=(img.alt||'').replace(/\s+logo$/i,'').trim();
+      var box=document.createElement('span');
+      box.className='tool-logo tool-fallback';
+      box.setAttribute('aria-label', name);
+      box.textContent=name.slice(0,2).toUpperCase();
+      img.replaceWith(box);
+    }, {once:true});
+  });
+})();
+</script>
+
+
+<script>
+document.querySelectorAll('.tool-logo').forEach(function(img){
+  img.addEventListener('error', function(){
+    img.style.visibility='hidden';
+    img.parentElement.classList.add('logo-unavailable');
+  }, {once:true});
+});
 </script>
 
 </body>
