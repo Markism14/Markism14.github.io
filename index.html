@@ -138,14 +138,37 @@ section.visible:before{transform:scaleX(1)}
 .sample-link{display:inline-block;color:#aaa2ff;text-decoration:none;font-size:11px;font-weight:750;margin-top:7px}
 .sample-link:hover{text-decoration:underline}
 
+
+
+
+.project-thumb{position:relative;overflow:hidden;padding:0;background:#0b0d11}
+.project-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.58);transition:transform .45s ease,filter .45s ease}
+.project-thumb span{position:relative;z-index:1;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.8);font-size:12px;font-weight:900;letter-spacing:1.5px}
+.work:hover .project-thumb img{transform:scale(1.045);filter:brightness(.7)}
+
+
+.project-thumb{text-decoration:none;cursor:pointer}
+.project-thumb em{position:absolute;z-index:2;bottom:10px;right:11px;font-style:normal;font-size:10px;font-weight:800;color:#fff;background:rgba(0,0,0,.48);border:1px solid rgba(255,255,255,.18);padding:5px 7px;border-radius:999px;opacity:0;transform:translateY(4px);transition:opacity .25s ease,transform .25s ease}
+.project-thumb:hover em{opacity:1;transform:none}
+
+
+.tool-logo{width:38px;height:38px;object-fit:contain;display:block;flex:0 0 38px;border-radius:9px;transition:transform .25s ease,filter .25s ease}
+.official-logo{padding:3px;background:rgba(255,255,255,.96)}
+.tool:hover .tool-logo{transform:scale(1.07);filter:brightness(1.08)}
+.tool-link{cursor:pointer}
+.tool-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+
+.tool-link:after{content:"↗";margin-left:auto;font-size:13px;opacity:.35;transition:opacity .2s ease,transform .2s ease}
+.tool-link:hover:after{opacity:.9;transform:translate(2px,-2px)}
+
 </style>
 </head>
 <body><div class="scroll-progress" aria-hidden="true"></div>
 
 <header class="nav">
  <div class="container nav-inner">
-  <a class="brand" href="#top">Mark Neil Robias</a>
-  <nav class="nav-links" aria-label="Main navigation">
+    <nav class="nav-links" aria-label="Main navigation">
    <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#tools">Tools</a><a href="#contact">Contact</a>
   </nav>
  </div>
@@ -214,8 +237,8 @@ section.visible:before{transform:scaleX(1)}
     <video controls preload="metadata" src="/samples/Sample-3.mp4"></video>
     <h3>AI Video Sample 03</h3><p>AI-assisted visual storytelling combining generated scenes with creative editing.</p><span class="tag">AI Video</span>
    </article>
-   <article class="card work"><a class="social-project-link" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener" aria-label="View Mark Neil Robias on TikTok"><div class="thumb">SHORT-FORM CONTENT</div></a><h3>Short-form Social Content</h3><p>Vertical content focused on hooks, captions, pacing, music, transitions, and retention.</p><span class="tag">Social Media</span><br><a class="sample-link" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener">View my TikTok →</a></article>
-   <article class="card work"><a class="social-project-link" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener" aria-label="View Mark Neil Robias on YouTube"><div class="thumb">VLOG EDITING</div></a><h3>Vlog Editing</h3><p>Personal vlog editing using structured cuts, music, transitions, subtitles, and story flow.</p><span class="tag">Video Editing</span><br><a class="sample-link" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener">Watch my vlog →</a></article>
+   <article class="card work"><a class="social-project-link" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener" aria-label="View Mark Neil Robias on TikTok"><a class="thumb project-thumb" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener" aria-label="Open short-form content on TikTok"><img src="images/ai-04.jpeg" alt="Short-form content thumbnail"><span>SHORT-FORM CONTENT</span><em>View TikTok →</em></a></a><h3>Short-form Social Content</h3><p>Vertical content focused on hooks, captions, pacing, music, transitions, and retention.</p><span class="tag">Social Media</span><br><a class="sample-link" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener">View my TikTok →</a></article>
+   <article class="card work"><a class="social-project-link" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener" aria-label="View Mark Neil Robias on YouTube"><a class="thumb project-thumb" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener" aria-label="Open vlog channel on YouTube"><img src="images/ai-05.jpeg" alt="Vlog editing thumbnail"><span>VLOG EDITING</span><em>View YouTube →</em></a></a><h3>Vlog Editing</h3><p>Personal vlog editing using structured cuts, music, transitions, subtitles, and story flow.</p><span class="tag">Video Editing</span><br><a class="sample-link" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener">Watch my vlog →</a></article>
   </div>
   <div class="feature">
    <div class="feature-grid">
@@ -252,57 +275,56 @@ section.visible:before{transform:scaleX(1)}
   <div class="kicker">05 — Tools</div><h2>Tools & Software</h2><p class="lead">Creative AI, editing, design, productivity, CRM, and business tools.</p>
   <div class="tool-list">
    <a class="tool tool-link" href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener" aria-label="Open official Google Flow website">
-    <img class="tool-logo" src="images/tools/google-flow.svg" alt="Google Flow">
+    <img class="tool-logo official-logo" src="https://labs.google/flow/about/hero/wordmark.svg" alt="Google Flow logo">
     <div><strong>Google Flow</strong><small>AI Video / Creative</small></div>
    </a>
    <a class="tool tool-link" href="https://klingai.com/" target="_blank" rel="noopener" aria-label="Open official Kling AI website">
-    <img class="tool-logo" src="images/tools/kling-ai.svg" alt="Kling AI">
+    <img class="tool-logo official-logo" src="https://kling.ai/favicon.ico" alt="Kling AI logo">
     <div><strong>Kling AI</strong><small>AI Video Generation</small></div>
    </a>
    <a class="tool tool-link" href="https://www.lumina-os.com/" target="_blank" rel="noopener" aria-label="Open official Lumina website">
-    <img class="tool-logo" src="images/tools/lumina.svg" alt="Lumina">
+    <img class="tool-logo official-logo" src="https://lumalabs.ai/favicon.ico" alt="Luma logo">
     <div><strong>Lumina</strong><small>AI Creative</small></div>
    </a>
    <a class="tool tool-link" href="https://www.capcut.com/" target="_blank" rel="noopener" aria-label="Open official CapCut website">
-    <img class="tool-logo" src="images/tools/capcut.svg" alt="CapCut">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/capcut/ffffff" alt="CapCut logo">
     <div><strong>CapCut</strong><small>Video Editing</small></div>
    </a>
    <a class="tool tool-link" href="https://filmora.wondershare.com/" target="_blank" rel="noopener" aria-label="Open official Filmora website">
-    <img class="tool-logo" src="images/tools/filmora.svg" alt="Filmora">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/wondershare/ffffff" alt="Filmora / Wondershare logo">
     <div><strong>Filmora</strong><small>Video Editing</small></div>
    </a>
    <a class="tool tool-link" href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener" aria-label="Open official Adobe Photoshop website">
-    <img class="tool-logo" src="images/tools/photoshop.svg" alt="Adobe Photoshop">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Adobe Photoshop logo">
     <div><strong>Adobe Photoshop</strong><small>Image Editing</small></div>
    </a>
    <a class="tool tool-link" href="https://www.canva.com/" target="_blank" rel="noopener" aria-label="Open official Canva website">
-    <img class="tool-logo" src="images/tools/canva.svg" alt="Canva">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva logo">
     <div><strong>Canva</strong><small>Design / Content</small></div>
    </a>
    <a class="tool tool-link" href="https://www.microsoft.com/microsoft-365" target="_blank" rel="noopener" aria-label="Open official Microsoft Office website">
-    <img class="tool-logo" src="images/tools/microsoft-office.svg" alt="Microsoft Office">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/microsoftoffice/D83B01" alt="Microsoft Office logo">
     <div><strong>Microsoft Office</strong><small>Productivity</small></div>
    </a>
    <a class="tool tool-link" href="https://www.hubspot.com/" target="_blank" rel="noopener" aria-label="Open official HubSpot website">
-    <img class="tool-logo" src="images/tools/hubspot.svg" alt="HubSpot">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot logo">
     <div><strong>HubSpot</strong><small>Currently Learning</small></div>
    </a>
    <a class="tool tool-link" href="https://www.salesforce.com/" target="_blank" rel="noopener" aria-label="Open official Salesforce website">
-    <img class="tool-logo" src="images/tools/salesforce.svg" alt="Salesforce">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/salesforce/00A1E0" alt="Salesforce logo">
     <div><strong>Salesforce</strong><small>Currently Learning</small></div>
    </a>
    <a class="tool tool-link" href="https://quickbooks.intuit.com/ph/" target="_blank" rel="noopener" aria-label="Open official QuickBooks website">
-    <img class="tool-logo" src="images/tools/quickbooks.svg" alt="QuickBooks">
+    <img class="tool-logo" src="https://cdn.simpleicons.org/quickbooks/2CA01C" alt="QuickBooks logo">
     <div><strong>QuickBooks</strong><small>Currently Learning</small></div>
    </a>
-  </div><h3>AI Tool Adaptability</h3><p>I’m not limited to one platform. I can learn new AI tools through documentation, testing, examples, and hands-on practice, then adapt prompts and production methods to the required output.</p></div>
- </div>
+ </div><h3>AI Tool Adaptability</h3><p>I’m not limited to one platform. I can learn new AI tools through documentation, testing, examples, and hands-on practice, then adapt prompts and production methods to the required output.</p></div>
 </section>
 
-<section id="contact" class="reveal" class="contact">
+<section id="contact" class="reveal contact">
  <div class="container contact-grid">
-  <div><div class="kicker">06 — Contact</div><h2>Let's work together.</h2><p class="lead">Open to opportunities in AI video creation, AI content, video editing, virtual assistance, technical support, and digital operations.</p><div class="contact-info"><span class="btn" style="cursor:text">markneilrobias@gmail.com</span><a class="btn" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener">TikTok</a><a class="btn" href="https://www.youtube.com/@mindmorph14" target="_blank" rel="noopener">YouTube</a></div></div>
-  <div class="quick"><a class="btn primary" href="mailto:markneilrobias@gmail.com">Email Me</a><a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a></div>
+  <div><div class="kicker">06 — Contact</div><h2>Let's work together.</h2><p class="lead">Open to opportunities in AI video creation, AI content, video editing, virtual assistance, technical support, and digital operations.</p><div class="contact-info"><span class="btn" style="cursor:text">markneilrobias@gmail.com</span><a class="btn" href="https://www.tiktok.com/@mmindmorph" target="_blank" rel="noopener">Short-form TikTok</a><a class="btn" href="https://www.youtube.com/@MesaMark14" target="_blank" rel="noopener">Vlog YouTube</a></div></div>
+  <div class="quick"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a><a class="btn" href="https://markism14.github.io/" target="_blank" rel="noopener">Portfolio</a></div>
  </div>
 </section>
 </main>
